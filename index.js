@@ -67,9 +67,6 @@ function createAreaTip(myMap, coords, message) {
     area1.href = "#";
     area1.onclick = function () {
         g_tiptext.innerHTML = message;
-        g_tipdiv.style.position = "fixed";
-        g_tipdiv.style.display = "block";
-        g_tipdiv.style.zIndex = "100";
     };
     myMap.appendChild(area1);
 }
