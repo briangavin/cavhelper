@@ -1,1 +1,210 @@
-[{"TIP":"ADVANCED TARGETING COMPUTER","VALUE":"(+1) to all direct-fire ranged assault Combat Roll(s) or Strike-Point Roll(s). Requires Target-Lock Action to activate."},{"TIP":"AMMO","VALUE":"Critical Fumble (Combat Roll only) requires 1d6 roll. On a (1) result, “jam/out of ammo” for all weapon systems of that type."},{"TIP":"AMMO BIN","VALUE":"Allows for model to clear one “jam/out of ammo” result per game per rating level equipped."},{"TIP":"STRIKE","VALUE":"Blocks use vs aircraft or infantry as part of a ranged assault Combat Action."},{"TIP":"WIZZO","VALUE":"(+1) to any direct-re ranged assault Combat Roll(s) or indirect-re Strike-Point Roll(s)."},{"TIP":"HARD","VALUE":"Model is considered a hard target when determining damage value track to use (The first number)"},{"TIP":"SOFT","VALUE":"Model is considered a soft target when determining damage value track to use"},{"TIP":"ABLATIVE ARMOR","VALUE":"(-1) AV vs SA: Ammo/Limited Ammo weapon systems. (+2) AV vs all other weapon systems"},{"TIP":"AEGIS","VALUE":"(+1) to close-combat assault Combat Roll(s) when defending"},{"TIP":"AIRBORNE","VALUE":"Allows infantry models to use Dismount Action from in-ight transport aircraft models as a Free Action (0 AP)."},{"TIP":"AMPHIBIOUS","VALUE":"Allows model to “cross” non-allowed water-based terrain objects. Requires additional (+1) MV per inch moved."},{"TIP":"ANTI-AIRCRAFT","VALUE":"Allows model to use Combat Action vs NoE aircraft models. (+1/+2) to Combat Roll(s) vs aircraft models"},{"TIP":"ANTI-INFANTRY","VALUE":"(+1) to all close-combat assault Combat Roll(s) vs infantry models"},{"TIP":"AREA OF EFFECT","VALUE":"Allows for a ranged assault or other effect to affect any model caught within the specied radius."},{"TIP":"ASSAULT","VALUE":"Removes one Combat Roll penalty per level when using the Combat Action: Run N’ Gun. Does NOT provide Combat Roll bonus"},{"TIP":"BLASTER","VALUE":"Increases the chance of a Critical Success (+1d6 to nal roll) when making a Combat Roll. Blaster (+1), Blaster 1 (+2), Blaster 2 (+3)"},{"TIP":"BLITZ","VALUE":"(+1) to all close-combat assault Combat Roll(s)."},{"TIP":"BULKY","VALUE":"Model occupies two slots when used in conjunction with SA: Dropship or SA: Transport."},{"TIP":"C3","VALUE":"Increases C3 point pool (+1) per rating level equipped."},{"TIP":"CHAIN-FIRE POD","VALUE":"Allows other models in same squad to use equipped model’s nal Strike-Point location. Requires Target-Lock Action to activate."},{"TIP":"CHAMELEON","VALUE":"(-1) to all direct-re ranged assault Combat Roll(s) from medium range-band or greater"},{"TIP":"COUNTER-BATTERY","VALUE":"Allows for indirect-re ranged assault (no Strike-Point Roll required) vs enemy model with a nal Strike-Point Location 12” or less from\nequipped model. Requires 1 AP and available Combat Action to activate."},{"TIP":"COUNTER-MEASURES","VALUE":"Allows for one attempt per turn to “block”Target-Lock Action or SA: TAG (0 AP). (+1) to 10+ Roll per rating level equipped"},{"TIP":"DROPSHIP","VALUE":"Allows model to transport one non-bulky CAV or vehicle model per rating level equipped"},{"TIP":"DOUBLE-TIME","VALUE":"(-2) to any Combat Roll vs equipped model if full MV used for 1 AP in single direction. Requires MV (11+)"},{"TIP":"ECM","VALUE":"Blocks all enemy model Target-Lock Actions. Requires enemy model in range (24”/30”). Allows Jamming Action. Requires Special Action\nto activate."},{"TIP":"REINFORCED","VALUE":"Allows model to reduce any Combat Roll Damage Table MoS by equipped rating level. Cannot be used to reduce below “0.”"},{"TIP":"RANGE","VALUE":"Weapon Range in inches"},{"TIP":"EST","VALUE":"Allows model to “share” current Target-Lock Action as a Free Action (0 AP) with squad. Requires enemy model in range (36”)."},{"TIP":"IMPROVED RANGE","VALUE":"(+1) to direct-re ranged assault Combat Rolls when red from long or extreme range band."},{"TIP":"WEAPON LOCATION","VALUE":"number of weapons this unit has of this type, and physical location."},{"TIP":"RACH FACTION","VALUE":"unit belongs to Rach Faction"},{"TIP":"RECON UNIT","VALUE":"recon unit type"},{"TIP":"THREAT VALUE","VALUE":"threat value points, the larger the number the more powerful the unit"},{"TIP":"MINIMUM RANGE","VALUE":"minimum range in inches weapon can be used."},{"TIP":"LIMITED AMMO","VALUE":"Critical Fumble (Combat Roll only) requires 1d6 roll. On a (1) or (2) result, “jam/out of ammo” for all weapon systems of that type."},{"TIP":"SHOCK","VALUE":"Roll Target-Point Roll vs SA: Shock value on any successful Combat Roll hit (no damage required). Failed roll results in Model State: Suppression."},{"TIP":"INDIRECT-FIRE","VALUE":"Allows for indirect-re ranged assault with or without a valid LoS."},{"TIP":"ATTACK UNIT","VALUE":"unit is of attacking type"},{"TIP":"AOE","VALUE":"Allows for a ranged assault or other effect to affect any model caught within the specied radius"},{"TIP":"RAVAGE","VALUE":"Doubles any damage to infantry models when in clear/open terrain types."},{"TIP":"SMART","VALUE":"Allows model to add (+1) to AoE or damage value of weapon system(s) by reducing other by (-1). Cannot be used to reduce below “0.”"},{"TIP":"FCS","VALUE":"(+1) to all Strike-Point Rolls for each additional model with SA in squad."},{"TIP":"RUGGED","VALUE":"Allows model to repair x2 non-lingering damage tracks with successful Repair Action 10+ Roll."},{"TIP":"TERRAN FACTION","VALUE":"Unit belongs to Terran Faction\n"},{"TIP":"TAG","VALUE":"Allows equipped model to use guided missiles and/or other laser-based weapon systems as part of a ranged assault. Does not add any (+)."},{"TIP":"SHIELDED","VALUE":"Block any nano-disassembler and ion disruptor attack results."},{"TIP":"OVERDRIVE","VALUE":"Doubles any damage. Requires declaration before any Combat Roll(s). Roll 1d6, target-point (1), +1 per additional weapon system used.\nFailed result prevents weapon system(s) use one turn. Critical Fumble (Combat Roll only) disables weapon system(s) for remainder of game"},{"TIP":"FIRE SUPPORT","VALUE":"Fire Support Unit"},{"TIP":"FLIGHT","VALUE":"Flight Unit"},{"TIP":"TRANSPORT","VALUE":"Transport Unit"},{"TIP":"SPECIALIST","VALUE":"Specialist Unit"}]
+[
+    {
+        "TIP": "ADVANCED TARGETING COMPUTER",
+        "VALUE": "(+1) to all direct-fire ranged assault Combat Roll(s) or Strike-Point Roll(s). Requires Target-Lock Action to activate."
+    },
+    {
+        "TIP": "AMMO",
+        "VALUE": "Critical Fumble (Combat Roll only) requires 1d6 roll. On a (1) result, “jam/out of ammo” for all weapon systems of that type."
+    },
+    {
+        "TIP": "AMMO BIN",
+        "VALUE": "Allows for model to clear one “jam/out of ammo” result per game per rating level equipped."
+    },
+    {
+        "TIP": "STRIKE",
+        "VALUE": "Blocks use vs aircraft or infantry as part of a ranged assault Combat Action."
+    },
+    {
+        "TIP": "WIZZO",
+        "VALUE": "(+1) to any direct-re ranged assault Combat Roll(s) or indirect-re Strike-Point Roll(s)."
+    },
+    {
+        "TIP": "HARD",
+        "VALUE": "Model is considered a hard target when determining damage value track to use (The first number)"
+    },
+    {
+        "TIP": "SOFT",
+        "VALUE": "Model is considered a soft target when determining damage value track to use"
+    },
+    {
+        "TIP": "ABLATIVE ARMOR",
+        "VALUE": "(-1) AV vs SA: Ammo/Limited Ammo weapon systems. (+2) AV vs all other weapon systems"
+    },
+    {
+        "TIP": "AEGIS",
+        "VALUE": "(+1) to close-combat assault Combat Roll(s) when defending"
+    },
+    {
+        "TIP": "AIRBORNE",
+        "VALUE": "Allows infantry models to use Dismount Action from in-ight transport aircraft models as a Free Action (0 AP)."
+    },
+    {
+        "TIP": "AMPHIBIOUS",
+        "VALUE": "Allows model to “cross” non-allowed water-based terrain objects. Requires additional (+1) MV per inch moved."
+    },
+    {
+        "TIP": "ANTI-AIRCRAFT",
+        "VALUE": "Allows model to use Combat Action vs NoE aircraft models. (+1/+2) to Combat Roll(s) vs aircraft models"
+    },
+    {
+        "TIP": "ANTI-INFANTRY",
+        "VALUE": "(+1) to all close-combat assault Combat Roll(s) vs infantry models"
+    },
+    {
+        "TIP": "AREA OF EFFECT",
+        "VALUE": "Allows for a ranged assault or other effect to affect any model caught within the specied radius."
+    },
+    {
+        "TIP": "ASSAULT",
+        "VALUE": "Removes one Combat Roll penalty per level when using the Combat Action: Run N’ Gun. Does NOT provide Combat Roll bonus"
+    },
+    {
+        "TIP": "BLASTER",
+        "VALUE": "Increases the chance of a Critical Success (+1d6 to nal roll) when making a Combat Roll. Blaster (+1), Blaster 1 (+2), Blaster 2 (+3)"
+    },
+    {
+        "TIP": "BLITZ",
+        "VALUE": "(+1) to all close-combat assault Combat Roll(s)."
+    },
+    {
+        "TIP": "BULKY",
+        "VALUE": "Model occupies two slots when used in conjunction with SA: Dropship or SA: Transport."
+    },
+    {
+        "TIP": "C3",
+        "VALUE": "Increases C3 point pool (+1) per rating level equipped."
+    },
+    {
+        "TIP": "CHAIN-FIRE POD",
+        "VALUE": "Allows other models in same squad to use equipped model’s nal Strike-Point location. Requires Target-Lock Action to activate."
+    },
+    {
+        "TIP": "CHAMELEON",
+        "VALUE": "(-1) to all direct-re ranged assault Combat Roll(s) from medium range-band or greater"
+    },
+    {
+        "TIP": "COUNTER-BATTERY",
+        "VALUE": "Allows for indirect-re ranged assault (no Strike-Point Roll required) vs enemy model with a nal Strike-Point Location 12” or less from\nequipped model. Requires 1 AP and available Combat Action to activate."
+    },
+    {
+        "TIP": "COUNTER-MEASURES",
+        "VALUE": "Allows for one attempt per turn to “block”Target-Lock Action or SA: TAG (0 AP). (+1) to 10+ Roll per rating level equipped"
+    },
+    {
+        "TIP": "DROPSHIP",
+        "VALUE": "Allows model to transport one non-bulky CAV or vehicle model per rating level equipped"
+    },
+    {
+        "TIP": "DOUBLE-TIME",
+        "VALUE": "(-2) to any Combat Roll vs equipped model if full MV used for 1 AP in single direction. Requires MV (11+)"
+    },
+    {
+        "TIP": "ECM",
+        "VALUE": "Blocks all enemy model Target-Lock Actions. Requires enemy model in range (24”/30”). Allows Jamming Action. Requires Special Action\nto activate."
+    },
+    {
+        "TIP": "REINFORCED",
+        "VALUE": "Allows model to reduce any Combat Roll Damage Table MoS by equipped rating level. Cannot be used to reduce below “0.”"
+    },
+    {
+        "TIP": "RANGE",
+        "VALUE": "Weapon Range in inches"
+    },
+    {
+        "TIP": "EST",
+        "VALUE": "Allows model to “share” current Target-Lock Action as a Free Action (0 AP) with squad. Requires enemy model in range (36”)."
+    },
+    {
+        "TIP": "IMPROVED RANGE",
+        "VALUE": "(+1) to direct-re ranged assault Combat Rolls when red from long or extreme range band."
+    },
+    {
+        "TIP": "WEAPON LOCATION",
+        "VALUE": "number of weapons this unit has of this type, and physical location."
+    },
+    {
+        "TIP": "RACH FACTION",
+        "VALUE": "unit belongs to Rach Faction"
+    },
+    {
+        "TIP": "RECON UNIT",
+        "VALUE": "recon unit type"
+    },
+    {
+        "TIP": "THREAT VALUE",
+        "VALUE": "threat value points, the larger the number the more powerful the unit"
+    },
+    {
+        "TIP": "MINIMUM RANGE",
+        "VALUE": "minimum range in inches weapon can be used."
+    },
+    {
+        "TIP": "LIMITED AMMO",
+        "VALUE": "Critical Fumble (Combat Roll only) requires 1d6 roll. On a (1) or (2) result, “jam/out of ammo” for all weapon systems of that type."
+    },
+    {
+        "TIP": "SHOCK",
+        "VALUE": "Roll Target-Point Roll vs SA: Shock value on any successful Combat Roll hit (no damage required). Failed roll results in Model State: Suppression."
+    },
+    {
+        "TIP": "INDIRECT-FIRE",
+        "VALUE": "Allows for indirect-re ranged assault with or without a valid LoS."
+    },
+    {
+        "TIP": "ATTACK UNIT",
+        "VALUE": "unit is of attacking type"
+    },
+    {
+        "TIP": "AOE",
+        "VALUE": "Allows for a ranged assault or other effect to affect any model caught within the specied radius"
+    },
+    {
+        "TIP": "RAVAGE",
+        "VALUE": "Doubles any damage to infantry models when in clear/open terrain types."
+    },
+    {
+        "TIP": "SMART",
+        "VALUE": "Allows model to add (+1) to AoE or damage value of weapon system(s) by reducing other by (-1). Cannot be used to reduce below “0.”"
+    },
+    {
+        "TIP": "FCS",
+        "VALUE": "(+1) to all Strike-Point Rolls for each additional model with SA in squad."
+    },
+    {
+        "TIP": "RUGGED",
+        "VALUE": "Allows model to repair x2 non-lingering damage tracks with successful Repair Action 10+ Roll."
+    },
+    {
+        "TIP": "TERRAN FACTION",
+        "VALUE": "Unit belongs to Terran Faction\n"
+    },
+    {
+        "TIP": "TAG",
+        "VALUE": "Allows equipped model to use guided missiles and/or other laser-based weapon systems as part of a ranged assault. Does not add any (+)."
+    },
+    {
+        "TIP": "SHIELDED",
+        "VALUE": "Block any nano-disassembler and ion disruptor attack results."
+    },
+    {
+        "TIP": "OVERDRIVE",
+        "VALUE": "Doubles any damage. Requires declaration before any Combat Roll(s). Roll 1d6, target-point (1), +1 per additional weapon system used.\nFailed result prevents weapon system(s) use one turn. Critical Fumble (Combat Roll only) disables weapon system(s) for remainder of game"
+    },
+    {
+        "TIP": "FIRE SUPPORT",
+        "VALUE": "Fire Support Unit"
+    },
+    {
+        "TIP": "FLIGHT",
+        "VALUE": "Flight Unit"
+    },
+    {
+        "TIP": "TRANSPORT",
+        "VALUE": "Transport Unit"
+    },
+    {
+        "TIP": "SPECIALIST",
+        "VALUE": "Specialist Unit"
+    }
+]
