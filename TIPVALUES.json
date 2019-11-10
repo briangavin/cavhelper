@@ -17,7 +17,7 @@
     },
     {
         "TIP": "WIZZO",
-        "VALUE": "(+1) to any direct-re ranged assault Combat Roll(s) or indirect-re Strike-Point Roll(s)."
+        "VALUE": "(+1) to any direct-fire ranged assault Combat Roll(s) or indirect-re Strike-Point Roll(s)."
     },
     {
         "TIP": "HARD",
@@ -133,7 +133,7 @@
     },
     {
         "TIP": "THREAT VALUE",
-        "VALUE": "threat value points, the larger the number the more powerful the unit"
+        "VALUE": "The larger the number the more powerful the unit."
     },
     {
         "TIP": "MINIMUM RANGE",
