@@ -61,7 +61,7 @@ function addDataCard(sImage: string): HTMLMapElement {
   let img = <HTMLImageElement>document.getElementById("card-image");
 
   if (g_usewebp) img.src = sImage + ".webp";
-  else img.src = sImage + ".jpeg";
+  else img.src = sImage + ".jpg";
 
   g_tiptext.innerHTML = "";
 

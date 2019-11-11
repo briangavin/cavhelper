@@ -52,7 +52,7 @@ function addDataCard(sImage) {
     if (g_usewebp)
         img.src = sImage + ".webp";
     else
-        img.src = sImage + ".jpeg";
+        img.src = sImage + ".jpg";
     g_tiptext.innerHTML = "";
     var myMap = document.getElementById("tipmap");
     while (myMap.firstChild) {
