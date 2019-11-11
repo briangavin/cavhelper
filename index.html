@@ -18,16 +18,99 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <style type="text/css">
+      .pad8 {
+          padding-left: 8px;
+      }
+      </style>
+
     <title>CAV Helper Card</title>
+
   </head>
   <body style="background-color:#cac59f" ;>
+
+        
+    <ul id="slide-out" class="sidenav">
+    <h4 class="pad8">Filter Cards by</h4>
+    <h5 class="pad8">Faction</h5>
+    <p class="pad8">
+        <label>
+          <input type="checkbox" checked="checked"/>
+          <span>Adon</span>
+        </label>
+      </p> 
+      <p class="pad8">
+          <label>
+            <input type="checkbox" checked="checked" />
+            <span>Almirithil</span>
+          </label>
+        </p>    
+        <p class="pad8">
+            <label>
+              <input type="checkbox" checked="checked"/>
+              <span>Malvernis</span>
+            </label>
+          </p>
+          <p class="pad8">
+              <label>
+                <input type="checkbox" checked="checked"/>
+                <span>Ritterlich</span>
+              </label>
+            </p>       
+            <p class="pad8">
+                <label>
+                  <input type="checkbox" checked="checked"/>
+                  <span>Temple</span>
+                </label>
+              </p>
+    
+    <p class="pad8">
+      <label>
+        <input type="checkbox" checked="checked"/>
+        <span>Rach</span>
+      </label>
+    </p>
+    <p class="pad8">
+      <label>
+        <input type="checkbox" checked="checked"/>
+        <span>Terran</span>
+      </label>
+    </p>
+
+    <h5 class="pad8">Unit Type</h5>
+    <p class="pad8">
+      <label>
+        <input type="checkbox" checked="checked"/>
+        <span>CAV</span>
+      </label>
+    </p>
+    <p class="pad8">
+      <label>
+        <input type="checkbox" checked="checked"/>
+        <span>Vehicle</span>
+      </label>
+    </p>
+    <p class="pad8">
+      <label>
+        <input type="checkbox" checked="checked"/>
+        <span>Aircraft</span>
+      </label>
+    </p>
+    <button class="lime darken-4 btn">Create List</button>
+    </ul>
+  </ul>
+    
+    <div>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="medium material-icons">settings_applications</i></a>   
+
+    </div>
     <div id="rootdiv">
       <img src="Rach/DICTATORB.webp" id="card-image" usemap="#tipmap" />
       <map name="tipmap" id="tipmap"></map>
-      <br></br>
+      <br></br>  
       <button id="previous" class="lime darken-4 btn">Previous</button>
       <button id="next" class="lime darken-4 btn">Next</button>
-      <p id="tiptext"></p>
+      <p class="pad8" id="tiptext"></p>
     </div>
 
     <script src="index.js"></script>

@@ -212,5 +212,14 @@ function findDesc(value: string) {
   return null;
 }
 
+var M;
+M.AutoInit();
+
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".sidenav");
+  var options;
+  var instances = M.Sidenav.init(elems, options);
+});
+
 g_usewebp = /chrome/i.test(navigator.userAgent);
 LoadTIPSData();
