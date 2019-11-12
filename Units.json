@@ -327,7 +327,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": "TANK"
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "RACH",
@@ -723,7 +723,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": "TANK"
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "RACH",
@@ -1119,7 +1119,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "TERRAN",
@@ -1185,7 +1185,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "AIRCRAFT"
     },
     {
         "FACTION": "TERRAN",
@@ -1251,7 +1251,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -1317,7 +1317,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -1383,7 +1383,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -1449,7 +1449,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -1515,7 +1515,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "TERRAN",
@@ -1581,7 +1581,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -1647,7 +1647,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "TERRAN",
@@ -1713,7 +1713,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "TERRAN",
@@ -1779,7 +1779,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -1845,7 +1845,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "TERRAN",
@@ -1911,7 +1911,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -1977,7 +1977,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -2043,7 +2043,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -2109,7 +2109,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -2175,7 +2175,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "TERRAN",
@@ -2241,7 +2241,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "TERRAN",
@@ -2307,6 +2307,6 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     }
 ]
