@@ -180,11 +180,13 @@ function findDesc(value) {
 }
 var M;
 M.AutoInit();
+var options;
 document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".sidenav");
-    var options;
     var instances = M.Sidenav.init(elems, options);
 });
+var collapsibleElem = document.querySelector(".collapsible");
+var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
 g_usewebp = /chrome/i.test(navigator.userAgent);
 LoadTIPSData();
 //# sourceMappingURL=index.js.map

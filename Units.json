@@ -2373,7 +2373,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2439,7 +2439,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2505,7 +2505,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2571,7 +2571,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2637,7 +2637,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "AIRCRAFT"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2703,7 +2703,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2769,7 +2769,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2835,7 +2835,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2901,7 +2901,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -2967,7 +2967,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3033,7 +3033,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3099,7 +3099,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3165,7 +3165,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3231,7 +3231,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3297,7 +3297,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3363,7 +3363,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3429,7 +3429,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3495,7 +3495,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3561,7 +3561,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3627,7 +3627,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "AIRCRAFT"
     },
     {
         "FACTION": "MALVERNIS",
@@ -3693,7 +3693,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "RITTER",
@@ -3759,7 +3759,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "RITTER",
@@ -3825,7 +3825,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -3891,7 +3891,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -3957,7 +3957,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4023,7 +4023,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4089,7 +4089,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "RITTER",
@@ -4155,7 +4155,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "RITTER",
@@ -4221,7 +4221,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "AIRCRAFT"
     },
     {
         "FACTION": "RITTER",
@@ -4287,7 +4287,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "RITTER",
@@ -4353,7 +4353,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4419,7 +4419,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4485,7 +4485,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4551,7 +4551,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4617,7 +4617,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4683,7 +4683,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4749,7 +4749,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4815,7 +4815,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "RITTER",
@@ -4881,7 +4881,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "ADON",
@@ -4947,7 +4947,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5013,7 +5013,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5079,7 +5079,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "ADON",
@@ -5145,7 +5145,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5211,7 +5211,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5277,7 +5277,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "ADON",
@@ -5343,7 +5343,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "ADON",
@@ -5409,7 +5409,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "VEHICLE"
     },
     {
         "FACTION": "ADON",
@@ -5475,7 +5475,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5541,7 +5541,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "AIRCRAFT"
     },
     {
         "FACTION": "ADON",
@@ -5607,7 +5607,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5673,7 +5673,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5739,7 +5739,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5805,7 +5805,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5871,7 +5871,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -5937,7 +5937,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -6003,7 +6003,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ADON",
@@ -6069,7 +6069,7 @@
         "TIP8VALUE": null,
         "TIP9COORD": null,
         "TIP9VALUE": null,
-        "TYPE": null
+        "TYPE": "CAV"
     },
     {
         "FACTION": "ALMIRITHIL",
