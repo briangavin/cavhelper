@@ -339,13 +339,13 @@ options.onCloseEnd = function() {
   g_units.aircraft = readsidenavCBs("aircraft", g_units.aircraft);
 
   if (g_updatefactions) {
-    //Force at least one to true or we will have nothing
+    //Force at least one to true or we will have nothing d
     if (!g_units.cav && !g_units.aircraft && !g_units.vehicle) {
       g_units.cav = true;
       setCBState("cav", true);
     }
 
-    //force at least on faction to true
+    //force at least on faction to true d
     if (
       !g_factions.adon &&
       !g_factions.almir &&
