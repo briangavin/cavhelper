@@ -41,79 +41,80 @@
 
         
     <ul id="slide-out" class="sidenav">
+        <h4 class="pad8">Card Lists</h4>
+      <button class="red btn"> Create</button>
+      <span></span>
+      <button class="blue btn"> Activate</button>
     <h4 class="pad8">Filter Cards by</h4>
     <h5 class="pad8">Faction</h5>
     <p class="pad8">
         <label>
-          <input type="checkbox" checked="checked"/>
+          <input id ="adon" type="checkbox" checked="checked"/>
           <span>Adon</span>
         </label>
       </p> 
       <p class="pad8">
           <label>
-            <input type="checkbox" checked="checked" />
+            <input id ="almir" type="checkbox" checked="checked" />
             <span>Almirithil</span>
           </label>
         </p>    
         <p class="pad8">
             <label>
-              <input type="checkbox" checked="checked" />
+              <input id ="indep" type="checkbox" checked="checked" />
               <span>Independent</span>
             </label>
           </p>     
         <p class="pad8">
             <label>
-              <input type="checkbox" checked="checked"/>
+              <input id ="malvernis" type="checkbox" checked="checked"/>
               <span>Malvernis</span>
             </label>
           </p>
           <p class="pad8">
               <label>
-                <input type="checkbox" checked="checked"/>
+                <input id ="ritter" type="checkbox" checked="checked"/>
                 <span>Ritter</span>
               </label>
             </p>       
             <p class="pad8">
                 <label>
-                  <input type="checkbox" checked="checked"/>
+                  <input id ="temple" type="checkbox" checked="checked"/>
                   <span>Temple</span>
                 </label>
               </p>
     
     <p class="pad8">
       <label>
-        <input type="checkbox" checked="checked"/>
+        <input id ="rach" type="checkbox" checked="checked"/>
         <span>Rach</span>
       </label>
     </p>
     <p class="pad8">
       <label>
-        <input type="checkbox" checked="checked"/>
+        <input id ="terran"type="checkbox" checked="checked"/>
         <span>Terran</span>
       </label>
     </p>
-
     <h5 class="pad8">Unit Type</h5>
     <p class="pad8">
       <label>
-        <input type="checkbox" checked="checked"/>
+        <input id ="cav"type="checkbox" checked="checked"/>
         <span>CAV</span>
       </label>
     </p>
     <p class="pad8">
       <label>
-        <input type="checkbox" checked="checked"/>
+        <input id ="vehicle" type="checkbox" checked="checked"/>
         <span>Vehicle</span>
       </label>
     </p>
     <p class="pad8">
       <label>
-        <input type="checkbox" checked="checked"/>
+        <input id="aircraft"type="checkbox" checked="checked"/>
         <span>Aircraft</span>
       </label>
     </p>
-    <button class="lime darken-4 btn">Reset</button>
-    </ul>
   </ul>
     
     <nav>
@@ -121,9 +122,18 @@
     <a href="#" data-target="slide-out" class="sidenav-trigger  show-on-large"><i class="material-icons">menu</i></a>   
     <button id="previous" class="lime darken-4 btn">Previous</button>
     <button id="next" class="lime darken-4 btn">Next</button>
+
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Full Catalog</a>
     </div>
     </nav>
 
+
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">Full Catalog</a></li>
+    <li><a href="#!">User List</a></li>
+  </ul>
     <div id="rootdiv">
       <img src="Rach/DICTATORB.webp" id="card-image" usemap="#tipmap" />
       <map name="tipmap" id="tipmap"></map>

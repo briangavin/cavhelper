@@ -1,9 +1,26 @@
 var g_tipvalues;
-var g_unitsdata;
+var g_unitsdata = [];
+var g_fullunitsdata;
 var g_curUnit = 0;
 var g_usewebp = false;
 var g_tiptext;
 var g_tipdiv;
+var g_updatefactions = false;
+var g_factions = {
+    adon: true,
+    almir: true,
+    indep: true,
+    malvernis: true,
+    ritter: true,
+    temple: true,
+    rach: true,
+    terran: true
+};
+var g_units = {
+    cav: true,
+    vehicle: true,
+    aircraft: true
+};
 function LoadTIPSData() {
     var url = "TIPVALUES.json";
     var xmlhttp = new XMLHttpRequest();
@@ -21,7 +38,10 @@ function LoadUnitData() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            g_unitsdata = JSON.parse(this.responseText);
+            g_fullunitsdata = JSON.parse(this.responseText);
+            for (var i = 0; i < g_fullunitsdata.length; i++) {
+                g_unitsdata[i] = g_fullunitsdata[i];
+            }
             //  for (let i = 0; i < g_unitsdata.length; i++) {
             //  createDataCard(g_unitsdata[i].Name);
             //}
@@ -46,6 +66,17 @@ function LoadUnitData() {
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+}
+function readsidenavCBs(faction, curState) {
+    var cbEl = document.getElementById(faction);
+    var CBfaction = cbEl.checked;
+    if (curState != CBfaction)
+        g_updatefactions = true;
+    return CBfaction;
+}
+function setCBState(id, state) {
+    var cbEl = document.getElementById(id);
+    cbEl.checked = state;
 }
 function addDataCard(sImage) {
     var img = document.getElementById("card-image");
@@ -178,15 +209,116 @@ function findDesc(value) {
     alert("Could not find description: " + value);
     return null;
 }
+function unitMatch(unitdata) {
+    if (g_units.cav && unitdata.TYPE === "CAV")
+        return true;
+    else if (g_units.vehicle && unitdata.TYPE === "VEHICLE")
+        return true;
+    else if (g_units.aircraft && unitdata.TYPE === "AIRCRAFT")
+        return true;
+    return false;
+}
+function UpdateCardArray() {
+    g_unitsdata.length = 0;
+    for (var i = 0; i < g_fullunitsdata.length; i++) {
+        if (g_factions.adon &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "ADON")
+            g_unitsdata.push(g_fullunitsdata[i]);
+        else if (g_factions.almir &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "ALMIRITHIL")
+            g_unitsdata.push(g_fullunitsdata[i]);
+        else if (g_factions.indep &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "INDEPENDENT")
+            g_unitsdata.push(g_fullunitsdata[i]);
+        else if (g_factions.malvernis &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "MALVERNIS")
+            g_unitsdata.push(g_fullunitsdata[i]);
+        else if (g_factions.ritter &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "RITTER")
+            g_unitsdata.push(g_fullunitsdata[i]);
+        else if (g_factions.temple &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "TEMPLE")
+            g_unitsdata.push(g_fullunitsdata[i]);
+        else if (g_factions.rach &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "RACH")
+            g_unitsdata.push(g_fullunitsdata[i]);
+        else if (g_factions.terran &&
+            unitMatch(g_fullunitsdata[i]) &&
+            g_fullunitsdata[i].FACTION === "TERRAN")
+            g_unitsdata.push(g_fullunitsdata[i]);
+    }
+}
 var M;
 M.AutoInit();
-var options;
+var options = {
+    edge: "left",
+    onCloseEnd: null
+};
 document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".sidenav");
     var instances = M.Sidenav.init(elems, options);
 });
 var collapsibleElem = document.querySelector(".collapsible");
 var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-g_usewebp = /chrome/i.test(navigator.userAgent);
+options.onCloseEnd = function () {
+    g_factions.adon = readsidenavCBs("adon", g_factions.adon);
+    g_factions.almir = readsidenavCBs("almir", g_factions.almir);
+    g_factions.indep = readsidenavCBs("indep", g_factions.indep);
+    g_factions.malvernis = readsidenavCBs("malvernis", g_factions.malvernis);
+    g_factions.ritter = readsidenavCBs("ritter", g_factions.ritter);
+    g_factions.temple = readsidenavCBs("temple", g_factions.temple);
+    g_factions.rach = readsidenavCBs("rach", g_factions.rach);
+    g_factions.terran = readsidenavCBs("terran", g_factions.terran);
+    g_units.cav = readsidenavCBs("cav", g_units.cav);
+    g_units.vehicle = readsidenavCBs("vehicle", g_units.vehicle);
+    g_units.aircraft = readsidenavCBs("aircraft", g_units.aircraft);
+    if (g_updatefactions) {
+        //Force at least one to true or we will have nothing
+        if (!g_units.cav && !g_units.aircraft && !g_units.vehicle) {
+            g_units.cav = true;
+            setCBState("cav", true);
+        }
+        //force at least on faction to true
+        if (!g_factions.adon &&
+            !g_factions.almir &&
+            !g_factions.malvernis &&
+            !g_factions.ritter &&
+            !g_factions.temple &&
+            !g_factions.ritter &&
+            !g_factions.terran) {
+            g_factions.rach = true;
+            setCBState("rach", true);
+        }
+        UpdateCardArray();
+        g_curUnit = 0;
+        createDataCard(g_unitsdata[g_curUnit].Name);
+        g_updatefactions = false;
+    }
+};
+function Catalog_clicked() {
+    alert("Catalog clicked");
+}
+function UserList_clicked() {
+    alert("User List clicked");
+}
+var dropdownOptions = {
+    onCloseEnd: null
+};
+document.addEventListener("DOMContentLoaded", function () {
+    var elems = document.querySelectorAll(".dropdown-trigger");
+    var instances = M.Dropdown.init(elems, dropdownOptions);
+});
+dropdownOptions.onCloseEnd = function () {
+    var el = document.getElementById("dropdown1");
+};
+// for now do not use webp
+g_usewebp = false;
 LoadTIPSData();
 //# sourceMappingURL=index.js.map
