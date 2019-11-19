@@ -33,6 +33,28 @@ function LoadTIPSData() {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
+function LoadPageData() {
+    if (window.localStorage.getItem("filter_factions") != null) {
+        g_factions = JSON.parse(window.localStorage.getItem("filter_factions"));
+    }
+    if (window.localStorage.getItem("filter_units") != null) {
+        g_units = JSON.parse(window.localStorage.getItem("filter_units"));
+    }
+    if (window.localStorage.getItem("cavdata") != null) {
+        g_unitsdata = JSON.parse(window.localStorage.getItem("cavdata"));
+    }
+    setCBState("adon", g_factions.adon);
+    setCBState("almir", g_factions.almir);
+    setCBState("indep", g_factions.indep);
+    setCBState("malvernis", g_factions.malvernis);
+    setCBState("ritter", g_factions.ritter);
+    setCBState("temple", g_factions.temple);
+    setCBState("rach", g_factions.rach);
+    setCBState("terran", g_factions.terran);
+    setCBState("cav", g_units.cav);
+    setCBState("vehicle", g_units.vehicle);
+    setCBState("aircraft", g_units.aircraft);
+}
 function LoadUnitData() {
     var url = "Units.json";
     var xmlhttp = new XMLHttpRequest();
@@ -45,6 +67,7 @@ function LoadUnitData() {
             //  for (let i = 0; i < g_unitsdata.length; i++) {
             //  createDataCard(g_unitsdata[i].Name);
             //}
+            LoadPageData();
             var prev = document.getElementById("previous");
             prev.onclick = function () {
                 g_curUnit--;
@@ -254,6 +277,12 @@ function UpdateCardArray() {
             g_fullunitsdata[i].FACTION === "TERRAN")
             g_unitsdata.push(g_fullunitsdata[i]);
     }
+    savePageData();
+}
+function savePageData() {
+    window.localStorage.setItem("filter_factions", JSON.stringify(g_factions));
+    window.localStorage.setItem("filter_units", JSON.stringify(g_units));
+    window.localStorage.setItem("cavdata", JSON.stringify(g_unitsdata));
 }
 var M;
 M.AutoInit();

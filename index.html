@@ -41,10 +41,27 @@
 
         
     <ul id="slide-out" class="sidenav">
-        <h4 class="pad8">Card Lists</h4>
-      <button class="red btn"> Create</button>
-      <span></span>
-      <button class="blue btn"> Activate</button>
+    <h4 class="pad8">Card List</h4>
+      <form action="#">
+            <p>
+              <label>
+                <input name="group1" type="radio" checked />
+                <span>Full Catalog</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>User List</span>
+              </label>
+            </p>
+          </form>
+                
+      <label id="editchoice" hidden class="pad8">
+            <input id ="editlist"type="checkbox" />
+            <span>Edit</span>
+          </label>
+    
     <h4 class="pad8">Filter Cards by</h4>
     <h5 class="pad8">Faction</h5>
     <p class="pad8">
@@ -120,10 +137,8 @@
     <nav>
         <div class="nav-wrapper brown">      
     <a href="#" data-target="slide-out" class="sidenav-trigger  show-on-large"><i class="material-icons">menu</i></a>   
-    <button id="previous" class="lime darken-4 btn">Previous</button>
-    <button id="next" class="lime darken-4 btn">Next</button>
-
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Full Catalog</a>
+    <button data-tooltip="Previous data card" id="previous" class="tooltipped lime darken-4 btn">Previous</button>
+    <button data-tooltip="Next data card" id="next" class="tooltipped lime darken-4 btn">Next</button>
     </div>
     </nav>
 
