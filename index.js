@@ -321,13 +321,20 @@ options.onCloseEnd = function () {
             !g_factions.ritter &&
             !g_factions.temple &&
             !g_factions.ritter &&
-            !g_factions.terran) {
+            !g_factions.terran &&
+            !g_factions.indep) {
             g_factions.rach = true;
             setCBState("rach", true);
         }
         UpdateCardArray();
+        if (g_unitsdata === undefined || g_unitsdata.length == 0) {
+            g_units.cav = true;
+            setCBState("cav", true);
+            UpdateCardArray();
+        }
         g_curUnit = 0;
-        createDataCard(g_unitsdata[g_curUnit].Name);
+        if (g_unitsdata.length === 0)
+            createDataCard(g_unitsdata[g_curUnit].Name);
         g_updatefactions = false;
     }
 };
