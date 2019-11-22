@@ -404,7 +404,7 @@ options.onCloseEnd = function() {
     }
 
     g_curUnit = 0;
-    if (g_unitsdata.length === 0) createDataCard(g_unitsdata[g_curUnit].Name);
+    createDataCard(g_unitsdata[g_curUnit].Name);
     g_updatefactions = false;
   }
 };
