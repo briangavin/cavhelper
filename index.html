@@ -42,23 +42,22 @@
         
     <ul id="slide-out" class="sidenav">
     <h4 class="pad8">Card List</h4>
-      <form action="#">
+      <form id="catalogselect" action="#">
             <p>
               <label>
-                <input name="group1" type="radio" checked />
+                <input name="catalog1" id="fullcatalog" type="radio" checked onclick="catalogclick(id)"/>
                 <span>Full Catalog</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="group1" type="radio" />
+                <input name="catalog1" id="userlist" type="radio"  onclick="catalogclick(id)"/>
                 <span>User List</span>
               </label>
             </p>
-          </form>
-                
-      <label id="editchoice" hidden class="pad8">
-            <input id ="editlist"type="checkbox" />
+          </form>              
+      <label id="editchoice" class="pad8">
+            <input id ="editlist"type="checkbox" onclick="editcatalogclick(id)" />
             <span>Edit</span>
           </label>
     

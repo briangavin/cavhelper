@@ -6,6 +6,8 @@ var g_usewebp = false;
 var g_tiptext;
 var g_tipdiv;
 var g_updatefactions = false;
+var g_editCatalog = false;
+var g_activeCatalog = 0;
 var g_factions = {
     adon: true,
     almir: true,
@@ -336,12 +338,37 @@ options.onCloseEnd = function () {
         createDataCard(g_unitsdata[g_curUnit].Name);
         g_updatefactions = false;
     }
+    if (g_editCatalog && g_activeCatalog != 0)
+        alert("Edit catalog mode");
 };
-function Catalog_clicked() {
-    alert("Catalog clicked");
+function editcatalogclick(id) {
+    var cbEl = document.getElementById("editlist");
+    g_editCatalog = cbEl.checked;
+}
+function catalogclick(id) {
+    readCatalogRadio();
 }
 function UserList_clicked() {
     alert("User List clicked");
+}
+function readCatalogRadio() {
+    var ele = document.getElementsByName("catalog1");
+    for (var i = 0; i < ele.length; i++) {
+        var inp = ele[i];
+        if ((inp.type = "radio")) {
+            if (inp.checked) {
+                g_activeCatalog = i;
+                if (inp.id === "fullcatalog") {
+                    var editchoice = document.getElementById("editchoice");
+                    editchoice.style.display = "none";
+                }
+                else {
+                    var editchoice = document.getElementById("editchoice");
+                    editchoice.style.display = "block";
+                }
+            }
+        }
+    }
 }
 var dropdownOptions = {
     onCloseEnd: null
@@ -355,5 +382,6 @@ dropdownOptions.onCloseEnd = function () {
 };
 // for now do not use webp
 g_usewebp = false;
+readCatalogRadio();
 LoadTIPSData();
 //# sourceMappingURL=index.js.map
