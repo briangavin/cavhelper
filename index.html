@@ -22,6 +22,10 @@
       .pad8 {
           padding-left: 8px;
       }
+      .hideelement {
+        display: none;
+      }
+
       </style>
 
     <title>CAV Helper Card</title>
@@ -52,16 +56,16 @@
             <p>
               <label>
                 <input name="catalog1" id="userlist" type="radio"  onclick="catalogclick(id)"/>
-                <span>User List</span>
+                <span id="userlistname">User List</span>
               </label>
             </p>
           </form>              
       <label id="editchoice" class="pad8">
             <input id ="editlist"type="checkbox" onclick="editcatalogclick(id)" />
-            <span>Edit</span>
+            <span>Add and Remove Units</span>
           </label>
     
-    <h4 class="pad8">Filter Cards by</h4>
+    <h4 class="pad8">Filter Catalog by</h4>
     <h5 class="pad8">Faction</h5>
     <p class="pad8">
         <label>
@@ -136,9 +140,11 @@
     <nav>
         <div class="nav-wrapper brown">      
     <a href="#" data-target="slide-out" class="sidenav-trigger  show-on-large"><i class="material-icons">menu</i></a>   
-    <button data-tooltip="Previous data card" id="previous" class="tooltipped lime darken-4 btn">Previous</button>
-    <button data-tooltip="Next data card" id="next" class="tooltipped lime darken-4 btn">Next</button>
-    </div>
+    <button  id="previous" class="lime darken-4 btn">Previous</button>
+    <button  id="next" class="lime darken-4 btn">Next</button>
+    <button  id="addunit" class="hideelement green darken-4 btn" onclick="addunitclicked()">Add</button>
+    <button  id="removeunit" class="hideelement red darken-4 btn" onclick="removeunitclicked()">Remove</button>
+  </div>
     </nav>
 
 

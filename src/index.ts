@@ -10,6 +10,8 @@ var g_editCatalog = false;
 var g_activeCatalog = 0;
 var g_editmode = false;
 
+var g_userlist = [];
+
 var g_factions = {
   adon: true,
   almir: true,
@@ -52,8 +54,8 @@ function LoadPageData() {
     g_units = JSON.parse(window.localStorage.getItem("filter_units"));
   }
 
-  if (window.localStorage.getItem("cavdata") != null) {
-    g_unitsdata = JSON.parse(window.localStorage.getItem("cavdata"));
+  if (window.localStorage.getItem("userlist") != null) {
+    g_userlist = JSON.parse(window.localStorage.getItem("userlist"));
   }
 
   setCBState("adon", g_factions.adon);
@@ -68,6 +70,27 @@ function LoadPageData() {
   setCBState("cav", g_units.cav);
   setCBState("vehicle", g_units.vehicle);
   setCBState("aircraft", g_units.aircraft);
+
+  UpdateCardArray();
+}
+
+function updateUI(sUnitName: string) {
+  let addUnit = <HTMLButtonElement>document.getElementById("addunit");
+  let removeUnit = <HTMLButtonElement>document.getElementById("removeunit");
+
+  if (!g_editCatalog) {
+    //Hide edit buttons
+    addUnit.style.display = "none";
+    removeUnit.style.display = "none";
+  } else {
+    if (!findUserList(sUnitName)) {
+      addUnit.style.display = "inline";
+      removeUnit.style.display = "none";
+    } else {
+      addUnit.style.display = "none";
+      removeUnit.style.display = "inline";
+    }
+  }
 }
 
 function LoadUnitData() {
@@ -90,6 +113,7 @@ function LoadUnitData() {
         g_curUnit--;
         if (g_curUnit < 0) g_curUnit = g_unitsdata.length - 1;
         createDataCard(g_unitsdata[g_curUnit].Name);
+        updateUI(g_unitsdata[g_curUnit].Name);
       };
 
       let next = <HTMLButtonElement>document.getElementById("next");
@@ -97,11 +121,13 @@ function LoadUnitData() {
         g_curUnit++;
         if (g_curUnit >= g_unitsdata.length) g_curUnit = 0;
         createDataCard(g_unitsdata[g_curUnit].Name);
+        updateUI(g_unitsdata[g_curUnit].Name);
       };
 
       g_tiptext = <HTMLSpanElement>document.getElementById("tiptext");
       g_tiptext.innerHTML = "Tip Text here";
       createDataCard(g_unitsdata[g_curUnit].Name);
+      updateUI(g_unitsdata[g_curUnit].Name);
     }
   };
 
@@ -261,6 +287,29 @@ function createDataCard(unitName: string) {
   }
 }
 
+function findUserList(name: string): boolean {
+  for (let i = 0; i < g_userlist.length; i++) {
+    if (g_userlist[i] === name) return true;
+  }
+
+  return false;
+}
+
+function addUserList(name: string) {
+  if (!findUserList(name)) g_userlist.push(name);
+}
+
+function removeUserList(name: string) {
+  if (findUserList(name)) {
+    for (let i = 0; i < g_userlist.length; i++) {
+      if (g_userlist[i] === name) {
+        g_userlist.splice(i, 1);
+        return;
+      }
+    }
+  }
+}
+
 function findUnit(name: string) {
   for (let i = 0; i < g_unitsdata.length; i++) {
     if (g_unitsdata[i].Name === name) return g_unitsdata[i];
@@ -277,6 +326,18 @@ function findDesc(value: string) {
   return null;
 }
 
+function addunitclicked() {
+  addUserList(g_unitsdata[g_curUnit].Name);
+  updateUI(g_unitsdata[g_curUnit].Name);
+  savePageData();
+}
+
+function removeunitclicked() {
+  removeUserList(g_unitsdata[g_curUnit].Name);
+  updateUI(g_unitsdata[g_curUnit].Name);
+  savePageData();
+}
+
 function unitMatch(unitdata: any): boolean {
   if (g_units.cav && unitdata.TYPE === "CAV") return true;
   else if (g_units.vehicle && unitdata.TYPE === "VEHICLE") return true;
@@ -287,55 +348,68 @@ function unitMatch(unitdata: any): boolean {
 
 function UpdateCardArray() {
   g_unitsdata.length = 0;
-  for (let i = 0; i < g_fullunitsdata.length; i++) {
-    if (
-      g_factions.adon &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "ADON"
-    )
+  if (g_activeCatalog === 0) {
+    for (let i = 0; i < g_fullunitsdata.length; i++) {
+      if (
+        g_factions.adon &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "ADON"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+      else if (
+        g_factions.almir &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "ALMIRITHIL"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+      else if (
+        g_factions.indep &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "INDEPENDENT"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+      else if (
+        g_factions.malvernis &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "MALVERNIS"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+      else if (
+        g_factions.ritter &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "RITTER"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+      else if (
+        g_factions.temple &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "TEMPLE"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+      else if (
+        g_factions.rach &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "RACH"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+      else if (
+        g_factions.terran &&
+        unitMatch(g_fullunitsdata[i]) &&
+        g_fullunitsdata[i].FACTION === "TERRAN"
+      )
+        g_unitsdata.push(g_fullunitsdata[i]);
+    }
+  } else if (
+    (g_activeCatalog != 0 && g_editCatalog) ||
+    g_userlist.length === 0
+  ) {
+    for (let i = 0; i < g_fullunitsdata.length; i++)
       g_unitsdata.push(g_fullunitsdata[i]);
-    else if (
-      g_factions.almir &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "ALMIRITHIL"
-    )
-      g_unitsdata.push(g_fullunitsdata[i]);
-    else if (
-      g_factions.indep &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "INDEPENDENT"
-    )
-      g_unitsdata.push(g_fullunitsdata[i]);
-    else if (
-      g_factions.malvernis &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "MALVERNIS"
-    )
-      g_unitsdata.push(g_fullunitsdata[i]);
-    else if (
-      g_factions.ritter &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "RITTER"
-    )
-      g_unitsdata.push(g_fullunitsdata[i]);
-    else if (
-      g_factions.temple &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "TEMPLE"
-    )
-      g_unitsdata.push(g_fullunitsdata[i]);
-    else if (
-      g_factions.rach &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "RACH"
-    )
-      g_unitsdata.push(g_fullunitsdata[i]);
-    else if (
-      g_factions.terran &&
-      unitMatch(g_fullunitsdata[i]) &&
-      g_fullunitsdata[i].FACTION === "TERRAN"
-    )
-      g_unitsdata.push(g_fullunitsdata[i]);
+  } else {
+    for (let i = 0; i < g_fullunitsdata.length; i++) {
+      if (findUserList(g_fullunitsdata[i].Name))
+        g_unitsdata.push(g_fullunitsdata[i]);
+    }
   }
 
   savePageData();
@@ -344,7 +418,7 @@ function UpdateCardArray() {
 function savePageData() {
   window.localStorage.setItem("filter_factions", JSON.stringify(g_factions));
   window.localStorage.setItem("filter_units", JSON.stringify(g_units));
-  window.localStorage.setItem("cavdata", JSON.stringify(g_unitsdata));
+  window.localStorage.setItem("userlist", JSON.stringify(g_userlist));
 }
 
 var M;
@@ -352,7 +426,8 @@ M.AutoInit();
 
 var options = {
   edge: "left",
-  onCloseEnd: null
+  onCloseEnd: null,
+  onOpenStart: null
 };
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -362,6 +437,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 var collapsibleElem = document.querySelector(".collapsible");
 var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+options.onOpenStart = function() {
+  let userlist = document.getElementById("userlistname");
+  userlist.innerHTML = "User List - " + g_userlist.length + " units";
+};
 
 options.onCloseEnd = function() {
   g_factions.adon = readsidenavCBs("adon", g_factions.adon);
@@ -400,7 +480,7 @@ options.onCloseEnd = function() {
     }
     UpdateCardArray();
 
-    if (g_unitsdata === undefined || g_unitsdata.length == 0) {
+    if (g_unitsdata === undefined || g_unitsdata.length === 0) {
       g_units.cav = true;
       setCBState("cav", true);
       UpdateCardArray();
@@ -409,7 +489,13 @@ options.onCloseEnd = function() {
     g_curUnit = 0;
     createDataCard(g_unitsdata[g_curUnit].Name);
     g_updatefactions = false;
+  } else if (g_activeCatalog != 0) {
+    UpdateCardArray();
+    g_curUnit = 0;
+    createDataCard(g_unitsdata[g_curUnit].Name);
   }
+
+  updateUI(g_unitsdata[g_curUnit].Name);
 
   if (g_editCatalog && g_activeCatalog != 0) {
     g_editmode = true;
@@ -421,6 +507,11 @@ options.onCloseEnd = function() {
 function editcatalogclick(id) {
   let cbEl = <HTMLInputElement>document.getElementById("editlist");
   g_editCatalog = cbEl.checked;
+
+  if (g_activeCatalog != 0 && !g_editCatalog && g_userlist.length === 0) {
+    let radiofull = <HTMLInputElement>document.getElementById("fullcatalog");
+    radiofull.checked = true;
+  }
 }
 
 function catalogclick(id) {
@@ -445,6 +536,11 @@ function readCatalogRadio() {
         } else {
           let editchoice = document.getElementById("editchoice");
           editchoice.style.display = "block";
+          if (g_userlist.length === 0) {
+            let editCB = <HTMLInputElement>document.getElementById("editlist");
+            editCB.checked = true;
+            g_editCatalog = true;
+          }
         }
       }
     }
@@ -466,5 +562,6 @@ dropdownOptions.onCloseEnd = function() {
 
 // for now do not use webp
 g_usewebp = false;
+
 readCatalogRadio();
 LoadTIPSData();
