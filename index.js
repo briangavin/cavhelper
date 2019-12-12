@@ -299,9 +299,17 @@ function unitMatch(unitdata) {
         return true;
     return false;
 }
+function findUnitDataName(name) {
+    for (var i = 0; i < g_unitsdata.length; i++) {
+        if (g_unitsdata[i].name === name) {
+            return true;
+        }
+    }
+    return false;
+}
 function UpdateCardArray() {
     g_unitsdata.length = 0;
-    if (g_activeCatalog === 0) {
+    if (g_activeCatalog === 0 || g_editCatalog) {
         for (var i = 0; i < g_fullunitsdata.length; i++) {
             if (g_factions.adon &&
                 unitMatch(g_fullunitsdata[i]) &&
@@ -337,15 +345,19 @@ function UpdateCardArray() {
                 g_unitsdata.push(g_fullunitsdata[i]);
         }
     }
-    else if ((g_activeCatalog != 0 && g_editCatalog) ||
-        g_userlist.length === 0) {
-        for (var i = 0; i < g_fullunitsdata.length; i++)
-            g_unitsdata.push(g_fullunitsdata[i]);
-    }
     else {
         for (var i = 0; i < g_fullunitsdata.length; i++) {
             if (findUserList(g_fullunitsdata[i].Name))
                 g_unitsdata.push(g_fullunitsdata[i]);
+        }
+    }
+    // add any user list items not already in the list
+    if (g_activeCatalog != 0 && g_editCatalog) {
+        for (var i = 0; i < g_userlist.length; i++) {
+            if (!findUnitDataName(g_userlist[i].Name)) {
+                if (findUserList(g_fullunitsdata[i].Name))
+                    g_unitsdata.push(g_userlist[i]);
+            }
         }
     }
     savePageData();
@@ -431,6 +443,8 @@ function editcatalogclick(id) {
     if (g_activeCatalog != 0 && !g_editCatalog && g_userlist.length === 0) {
         var radiofull = document.getElementById("fullcatalog");
         radiofull.checked = true;
+        var editchoice = document.getElementById("editchoice");
+        editchoice.style.display = "none";
     }
 }
 function catalogclick(id) {
