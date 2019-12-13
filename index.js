@@ -354,9 +354,11 @@ function UpdateCardArray() {
     // add any user list items not already in the list
     if (g_activeCatalog != 0 && g_editCatalog) {
         for (var i = 0; i < g_userlist.length; i++) {
-            if (!findUnitDataName(g_userlist[i].Name)) {
-                if (findUserList(g_fullunitsdata[i].Name))
-                    g_unitsdata.push(g_userlist[i]);
+            if (!findUnitDataName(g_userlist[i])) {
+                for (var j = 0; j < g_fullunitsdata.length; j++) {
+                    if (g_userlist[i] === g_fullunitsdata[j].Name)
+                        g_unitsdata.push(g_fullunitsdata[j]);
+                }
             }
         }
     }
@@ -445,6 +447,7 @@ function editcatalogclick(id) {
         radiofull.checked = true;
         var editchoice = document.getElementById("editchoice");
         editchoice.style.display = "none";
+        g_editmode = false;
     }
 }
 function catalogclick(id) {
@@ -463,6 +466,9 @@ function readCatalogRadio() {
                 if (inp.id === "fullcatalog") {
                     var editchoice = document.getElementById("editchoice");
                     editchoice.style.display = "none";
+                    var editCB = document.getElementById("editlist");
+                    editCB.checked = false;
+                    g_editCatalog = false;
                 }
                 else {
                     var editchoice = document.getElementById("editchoice");
@@ -476,6 +482,10 @@ function readCatalogRadio() {
             }
         }
     }
+}
+function eraseunitlistclicked() {
+    g_userlist.length = 0;
+    options.onOpenStart();
 }
 var dropdownOptions = {
     onCloseEnd: null

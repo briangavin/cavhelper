@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <style type="text/css">
-      .pad8 {
+      .sidepadding {
           padding-left: 8px;
       }
       .hideelement {
@@ -45,7 +45,7 @@
 
         
     <ul id="slide-out" class="sidenav">
-    <h4 class="pad8">Card List</h4>
+    <h4 class="sidepadding">Card List</h4>
       <form id="catalogselect" action="#">
             <p>
               <label>
@@ -60,76 +60,80 @@
               </label>
             </p>
           </form>              
-      <label id="editchoice" class="pad8">
+      <label id="editchoice" class="sidepadding">
             <input id ="editlist"type="checkbox" onclick="editcatalogclick(id)" />
             <span>Add and Remove Units</span>
           </label>
+          <br>
+      <p class="sidepadding">
+      <button  id="eraseunitlist" class="red btn" onclick="eraseunitlistclicked()">Erase User List</button>
+      </p>
     
-    <h4 class="pad8">Filter Catalog by</h4>
-    <h5 class="pad8">Faction</h5>
-    <p class="pad8">
+    <h4 class="sidepadding">Filter Catalog by</h4>
+    <h5 class="sidepadding">Faction</h5>
+    <p class="sidepadding">
         <label>
           <input id ="adon" type="checkbox" checked="checked"/>
           <span>Adon</span>
         </label>
       </p> 
-      <p class="pad8">
+      <p class="sidepadding">
           <label>
             <input id ="almir" type="checkbox" checked="checked" />
             <span>Almirithil</span>
           </label>
         </p>    
-        <p class="pad8">
+        <p class="sidepadding">
             <label>
               <input id ="indep" type="checkbox" checked="checked" />
               <span>Independent</span>
             </label>
           </p>     
-        <p class="pad8">
+        <p class="sidepadding">
             <label>
               <input id ="malvernis" type="checkbox" checked="checked"/>
               <span>Malvernis</span>
             </label>
           </p>
-          <p class="pad8">
+          <p class="sidepadding">
               <label>
                 <input id ="ritter" type="checkbox" checked="checked"/>
                 <span>Ritter</span>
               </label>
             </p>       
-            <p class="pad8">
+            <p class="sidepadding">
                 <label>
                   <input id ="temple" type="checkbox" checked="checked"/>
                   <span>Temple</span>
                 </label>
               </p>
     
-    <p class="pad8">
+    <p class="sidepadding">
       <label>
         <input id ="rach" type="checkbox" checked="checked"/>
         <span>Rach</span>
       </label>
     </p>
-    <p class="pad8">
+    <p class="sidepadding">
       <label>
         <input id ="terran"type="checkbox" checked="checked"/>
         <span>Terran</span>
       </label>
     </p>
-    <h5 class="pad8">Unit Type</h5>
-    <p class="pad8">
+    <h5 class="sidepadding">Unit Type</h5>
+    <p class="sidepadding">
       <label>
         <input id ="cav"type="checkbox" checked="checked"/>
         <span>CAV</span>
       </label>
     </p>
-    <p class="pad8">
+    <p class="sidepadding">
       <label>
         <input id ="vehicle" type="checkbox" checked="checked"/>
         <span>Vehicle</span>
       </label>
     </p>
-    <p class="pad8">
+    <p class="sidepadding">
       <label>
         <input id="aircraft"type="checkbox" checked="checked"/>
         <span>Aircraft</span>
@@ -157,7 +161,7 @@
       <img src="Rach/DICTATORB.webp" id="card-image" usemap="#tipmap" />
       <map name="tipmap" id="tipmap"></map>
       <br></br>  
-      <p class="pad8" id="tiptext"></p>
+      <p class="sidepadding" id="tiptext"></p>
     </div>
 
     
