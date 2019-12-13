@@ -473,8 +473,12 @@ options.onCloseEnd = function() {
   g_units.vehicle = readsidenavCBs("vehicle", g_units.vehicle);
   g_units.aircraft = readsidenavCBs("aircraft", g_units.aircraft);
 
-  if (g_updatefactions) {
-    //Force at least one to true or we will have nothing d
+  if (g_activeCatalog != 0) {
+    UpdateCardArray();
+    g_curUnit = 0;
+    createDataCard(g_unitsdata[g_curUnit].Name);
+  } else {
+    //Force at least one to true or we will have nothing display
     if (!g_units.cav && !g_units.aircraft && !g_units.vehicle) {
       g_units.cav = true;
       setCBState("cav", true);
@@ -505,10 +509,6 @@ options.onCloseEnd = function() {
     g_curUnit = 0;
     createDataCard(g_unitsdata[g_curUnit].Name);
     g_updatefactions = false;
-  } else if (g_activeCatalog != 0) {
-    UpdateCardArray();
-    g_curUnit = 0;
-    createDataCard(g_unitsdata[g_curUnit].Name);
   }
 
   updateUI(g_unitsdata[g_curUnit].Name);
@@ -572,6 +572,16 @@ function readCatalogRadio() {
 function eraseunitlistclicked() {
   g_userlist.length = 0;
   options.onOpenStart();
+
+  let radiofull = <HTMLInputElement>document.getElementById("fullcatalog");
+  radiofull.checked = true;
+  let editchoice = document.getElementById("editchoice");
+  editchoice.style.display = "none";
+  g_editmode = false;
+  let editCB = <HTMLInputElement>document.getElementById("editlist");
+  editCB.checked = false;
+  g_editCatalog = false;
+  g_activeCatalog = 0;
 }
 
 var dropdownOptions = {
