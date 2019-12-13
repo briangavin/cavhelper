@@ -469,47 +469,48 @@ options.onCloseEnd = function() {
   g_factions.rach = readsidenavCBs("rach", g_factions.rach);
   g_factions.terran = readsidenavCBs("terran", g_factions.terran);
 
+  // Must be at least 1 faction checked
+  if (
+    !g_factions.adon &&
+    !g_factions.almir &&
+    !g_factions.malvernis &&
+    !g_factions.ritter &&
+    !g_factions.temple &&
+    !g_factions.ritter &&
+    !g_factions.terran &&
+    !g_factions.indep
+  ) {
+    g_factions.rach = true;
+    setCBState("rach", true);
+  }
+
   g_units.cav = readsidenavCBs("cav", g_units.cav);
   g_units.vehicle = readsidenavCBs("vehicle", g_units.vehicle);
   g_units.aircraft = readsidenavCBs("aircraft", g_units.aircraft);
+
+  //Force at least one to true or we will have nothing display
+  if (!g_units.cav && !g_units.aircraft && !g_units.vehicle) {
+    g_units.cav = true;
+    setCBState("cav", true);
+  }
 
   if (g_activeCatalog != 0) {
     UpdateCardArray();
     g_curUnit = 0;
     createDataCard(g_unitsdata[g_curUnit].Name);
-  } else {
-    //Force at least one to true or we will have nothing display
-    if (!g_units.cav && !g_units.aircraft && !g_units.vehicle) {
-      g_units.cav = true;
-      setCBState("cav", true);
-    }
-
-    //force at least on faction to true d
-    if (
-      !g_factions.adon &&
-      !g_factions.almir &&
-      !g_factions.malvernis &&
-      !g_factions.ritter &&
-      !g_factions.temple &&
-      !g_factions.ritter &&
-      !g_factions.terran &&
-      !g_factions.indep
-    ) {
-      g_factions.rach = true;
-      setCBState("rach", true);
-    }
-    UpdateCardArray();
-
-    if (g_unitsdata === undefined || g_unitsdata.length === 0) {
-      g_units.cav = true;
-      setCBState("cav", true);
-      UpdateCardArray();
-    }
-
-    g_curUnit = 0;
-    createDataCard(g_unitsdata[g_curUnit].Name);
-    g_updatefactions = false;
   }
+
+  UpdateCardArray();
+
+  if (g_unitsdata === undefined || g_unitsdata.length === 0) {
+    g_units.cav = true;
+    setCBState("cav", true);
+    UpdateCardArray();
+  }
+
+  g_curUnit = 0;
+  createDataCard(g_unitsdata[g_curUnit].Name);
+  g_updatefactions = false;
 
   updateUI(g_unitsdata[g_curUnit].Name);
 
